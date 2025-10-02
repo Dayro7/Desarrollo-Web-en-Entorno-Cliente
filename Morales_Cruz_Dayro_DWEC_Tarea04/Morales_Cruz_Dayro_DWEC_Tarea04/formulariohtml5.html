@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de creación de planes malvados.</title>
+    <style>
+        label,
+        input {
+            margin: 10px;
+        }
+
+        fieldset {
+            width: 450px;
+        }
+        #botones {
+            display: flex;
+            justify-content: center;
+        }
+        #visitas {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+            background-color: #f8f9fa; /* Color de fondo */
+            border: 1px solid #dee2e6; /* Borde */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de creación de planes malvados.</h1>
+    <fieldset>
+        <legend>Complete los siguientes campos</legend>
+        <form action="" id="form">
+            <label for="nombre"><b>Nombre del plan: </b></label>
+            <input type="text" name="nombre" id="form-nombre" required><br>
+            <label for="codigo"><b>Código del plan: </b></label>
+            <!-- Modificamos Para que la primera posicion sea una letra seguida de 3 a 7 numeros-->
+            <input type="text" name="codigo" id="form-codigo" pattern="^[a-zA-ZñÑçÇ]\d{3,7}$" required
+                title="Introduzca un código válido"><br><br>
+            <div id="form-tipo">
+                <label for="tipo"><b>Seleccione tipo de plan:</b></label><br>
+                <input type="radio" name="tipo" id="OP" value="OP" required>
+                <label for="OP"><b>Operaciones de campo</b></label><br>
+                <input type="radio" name="tipo" id="MF" value="MF" required>
+                <label for="MF"><b>Manejo de recursos financieros</b></label><br>
+                <input type="radio" name="tipo" id="DT" value="DT" required>
+                <label for="DT"><b>Desarrollo de tecnología</b></label><br>
+                <input type="radio" name="tipo" id="LP" value="LP" required>
+                <label for="LP"><b>Lucha de poder interno</b></label><br>
+                <input type="radio" name="tipo" id="OR" value="OR" required>
+                <label for="OR"><b>Operaciones de rescate</b></label><br>
+                <input type="radio" name="tipo" id="CD" value="CD" required>
+                <label for="CD"><b>Cifrado y descifrado</b></label><br>
+                <input type="radio" name="tipo" id="OE" value="OE" required>
+                <label for="OE"><b>Operaciones encubiertas</b></label><br>
+                <input type="radio" name="tipo" id="CI" value="CI" required>
+                <label for="CI"><b>Contrainteligencia</b></label><br>
+                <input type="radio" name="tipo" id="DE" value="DE" required>
+                <label for="DE"><b>Desinformación Estratégica</b></label><br>
+            </div><br>
+            <label for="paises"><b>Paises disponibles:</b></label>
+            <input type="text" id="form-paises" list="opciones-paises" name="paises">
+            <datalist id="opciones-paises">
+                <option value="Francia">
+                <option value="Alemania">
+                <option value="España">
+                <option value="Japon">
+                <option value="EEUU">
+            </datalist><br>
+            <div id="botones">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </fieldset>
+    <br>
+    <!-- donde se van a enseñar los datos validados -->
+    <div>
+        <p id="nombre"></p>
+        <p id="codigo"></p>
+        <p id="paises"></p>
+        <p id="visitas">Número de visitas a nuestra página: </p>
+    </div>
+    <script src="formulariohtml5.js"></script>
+</body>
+
+</html>

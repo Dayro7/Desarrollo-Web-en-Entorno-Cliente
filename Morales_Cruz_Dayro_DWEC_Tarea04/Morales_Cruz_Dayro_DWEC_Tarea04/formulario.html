@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sección de admisión en el congreso.</title>
+  <style>
+    label,
+    input {
+      margin: 10px;
+    }
+
+    fieldset {
+      width: 450px;
+    }
+
+    #admision .mostrar {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #botones {
+      display: flex;
+      justify-content: center;
+    }
+
+    #visita {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      background-color: #f8f9fa;
+      /* Color de fondo */
+      border: 1px solid #dee2e6;
+      /* Borde */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Formulario de admisión en el congreso</h1>
+  <fieldset>
+    <legend>Complete los siguientes campos</legend>
+    <form action="" id="admision"><br>
+      <label for="nombre"><b>Nombre: </b></label><br />
+      <input type="text" id="form-nombre" name="nombre" required /><br><br />
+      <label for="nacionalidad"><b>Nacionalidad:</b></label><br><br />
+      <select id="form-nacionalidad" name="nacionalidad">
+        <option value="">--Seleccione país--</option>
+        <option value="ES">España</option>
+        <option value="FR">Francia</option>
+        <option value="IT">Italia</option>
+        <option value="UK">Reino Unido</option>
+        <option value="US">Estados Unidos</option>
+      </select><br><br />
+      <label for="contraseña"><b>Contraseña:</b></label><br />
+      <input type="password" id="form-contraseña" name="contraseña" required /><br />
+      <label for="contraseña"><b>Repetir Contraseña:</b></label><br />
+      <div class="mostrar">
+        <input type="password" id="form-passwordRepeat" name="contraseña" required /><br />
+        <button type="button" id="mostrarContraseña">Mostrar Contraseña</button>
+      </div>
+      <br>
+      <div id="botones">
+        <input type="reset" value="Reiniciar" />
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
+  </fieldset>
+  <!-- donde se van a ir enseñando los datos -->
+  <div>
+    <p id="nombre"></p>
+    <p id="nacionalidad"></p>
+    <p id="contraseña"></p>
+    <p id="visita">Número de visitas a nuestra página:</p>
+  </div>
+  <script src="formulario.js"></script>
+</body>
+
+</html>
