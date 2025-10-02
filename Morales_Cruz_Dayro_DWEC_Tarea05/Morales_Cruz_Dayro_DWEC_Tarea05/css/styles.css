@@ -1,0 +1,123 @@
+/*
+* DWEC_Tarea05
+* Autor: Dayro Morales Cruz
+*/
+
+@font-face {
+    font-family: Alien;
+    src: url('../fonts/alienrobot.ttf') format('truetype');
+}
+td {
+    width: 90px;
+    height: 90px;
+    position: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    border: #038af8 2px solid;
+}
+td:active {
+    transform: scale(0.95);
+}
+
+table {
+    background-color: rgba(248, 224, 2, 0.788);
+    margin: 50px 50px 50px 50px;
+    border-radius: 0.2em;
+    border: #fa6502 3px solid;
+}
+
+label {
+    position: center;
+    padding: 0.3em;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fa6502;
+}
+input {
+    width: 125px;
+    height: 25px;
+    position: center;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(248, 248, 246, 0.788);
+    font-family: "Alien";
+    font-size: 1.5em;
+    color: #0703f8;
+}
+
+body {
+    background-image: url(../img/musica.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #c43c3c;
+    font-family: "Alien";
+    font-style: oblique;
+    font-size: 1.0em;
+    text-align: center;
+}
+h1 {
+    font-family: "Alien";
+    font-size: 2.2em;
+}
+
+div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-left: 10px;
+}
+
+img {
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    margin: 10px;
+}
+
+p {
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    border: #fa6502 3px solid;
+    background-color: rgba(248, 224, 2, 0.788);
+}
+
+
+/***** BOTONES *****/
+
+button {
+    border-radius: 10px;
+    border: #fa6502 3px solid;
+    background-color: rgba(248, 224, 2, 0.788);
+    margin-top: 1rem;
+    width: 25%;
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Alien";
+    font-size: 1.0em;
+    color: #038af8;
+    font-style: oblique;
+}
+
+button:active {
+    transform: scale(0.95);
+}

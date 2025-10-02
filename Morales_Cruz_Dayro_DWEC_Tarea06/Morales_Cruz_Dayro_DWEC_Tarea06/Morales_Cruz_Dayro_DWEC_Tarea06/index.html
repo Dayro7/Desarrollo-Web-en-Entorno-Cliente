@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Tiempo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #5fb4f6bc;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #contenedor {
+            margin: 40px;
+            padding: 40px;
+        }
+
+        #botones {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #localidad {
+            height: 30px;
+            width: 300px;
+            margin-right: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            border: 4px #1d669e solid;
+        }
+
+        #btnTiempoActual,
+        #btnPosicionGPS {
+            height: 40px;
+            width: 150px;
+            margin-right: 10px;
+            border-radius: 20px;
+            background-color: #35a3f7;
+            border: 3px #1d669e solid;
+            transition: background-color 0.4s ease;
+        }
+
+        #btnTiempoActual:hover,
+        #btnPosicionGPS:hover {
+            background-color: #1385dc;
+        }
+
+        #btnTiempoActual:active,
+        #btnPosicionGPS:active {
+            transform: scale(0.95);
+        }
+
+        #mapa {
+            width: 100%;
+            height: auto;
+            border: 3px #1d669e solid;
+            padding: 10px;
+        }
+
+        #info-tiempo {
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            display: hide;
+        }
+
+        #previsionTable td {
+            padding: 10px;
+            padding-right: 30px;
+            text-align: center;
+        }
+
+        #previsionTable tr {
+            padding: 10px;
+            padding-right: 30px;
+            text-align: center;
+            background-color: rgba(32, 118, 161, 0.1);
+            text-align: center;
+        }
+
+        #previsionTable th {
+            padding: 20px;
+            padding-right: 30px;
+            background-color: rgba(30, 110, 150, 0.3);
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .dias {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #titulo-ciudad {
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-size: 2em;
+            font-weight: bold;
+            margin: 15px 15px 15px 15px;
+        }
+        #geomap {
+            width: 100%;
+            height: 280px;
+            border: 3px #1d669e solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="botones">
+            <input type="text" id="localidad" placeholder="Escribe la localidad">
+            <button id="btnTiempoActual">Tiempo Actual</button>
+            <button id="btnPosicionGPS">Posición GPS</button>
+        </div>
+        <div id="mapa">
+            <div id="loader"></div>
+            
+            <div id="info-tiempo">
+                <div id="titulo-ciudad"></div>
+                <table id="previsionTable" class="previsionTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Día</th>
+                            <th scope="col">Temperatura</th>
+                            <th scope="col">Condición climática</th>
+                            <th scope="col">Viento</th>
+                            <th scope="col">Lluvia</th>
+                            <th scope="col">Visibilidad</th>
+                            <th scope="col">Humedad</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="geomap"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
